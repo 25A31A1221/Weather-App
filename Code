@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+class Weather {
+private:
+    string city;
+    float temperature;
+    int humidity;
+    float windSpeed;
+
+public:
+    void getData() {
+        cout << "Enter City Name: ";
+        cin >> city;
+
+        // Sample data
+        temperature = 32.5;
+        humidity = 68;
+        windSpeed = 12.3;
+    }
+
+    void displayData() {
+        cout << "\n------ Weather Report ------\n";
+        cout << "City        : " << city << endl;
+        cout << "Temperature : " << temperature << " °C" << endl;
+        cout << "Humidity    : " << humidity << " %" << endl;
+        cout << "Wind Speed  : " << windSpeed << " km/h" << endl;
+        cout << "Condition   : Sunny\n";
+    }
+};
+
+int main() {
+    Weather w;
+    w.getData();
+    w.displayData();
+
+    return 0;
+}
